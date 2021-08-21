@@ -26,7 +26,7 @@ const AddMovie = ({handeladd}) => {
       function closeModal() {
         setIsOpen(false);
       }
-    const handelrating=(r)=>setRating(r);
+    const handrating=(r)=>setRating(r);
 
 //addd card
 const handelsubmit=(e)=>{
@@ -57,7 +57,7 @@ const handelsubmit=(e)=>{
             <label>Date</label>
             <input type="date"  value={date} onChange={(e=>setDate(e.target.value))}required />
             <label>Rating</label>
-            <StarRating rating={rating} handelrating={handelrating}/>
+            <StarRating rating={rating} handrating={handrating}/>
             <label>Image</label>
             <input type="URL" value={image}  onChange={(e=>setImage(e.target.value))} required/>
             <div>

@@ -8,7 +8,7 @@ const Search = ({search,handesearch,handrating,searchRating}) => {
             <h1>Our movie App</h1>
             <div className="search-container"><input className="inp" type="text"
              value={search} onChange={handesearch}/>
-            <StarRating  rating={searchRating}  functrating={handrating}/>
+            <StarRating  rating={searchRating}  handrating={handrating}/>
             </div>
           
         </div>

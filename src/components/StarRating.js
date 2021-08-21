@@ -1,17 +1,17 @@
 import React from 'react'
 
-const StarRating = ({rating,handelrating}) => {
+const StarRating = ({rating,handrating}) => {
     function star(x)
     {
         var star=[];
-        for(let i=0;i<5;i++)
+        for(let i=1;i<=5;i++)
             {
-               if(i<x)
+               if(i<=x)
                {
-                   star.push(<span onClick={()=>handelrating(i)} style={{color:'gold'}}>★</span>)
+                   star.push(<span onClick={()=>handrating(i)} style={{color:'gold'}}>★</span>)
                }
                else{
-                   star.push(<span onClick={()=>handelrating(i)} style={{color:'black',fontSize:'20px'}}>☆</span>)
+                   star.push(<span onClick={()=>handrating(i)} style={{color:'black',fontSize:'20px'}}>☆</span>)
                }
             }
 
@@ -22,6 +22,9 @@ const StarRating = ({rating,handelrating}) => {
                {star(rating)}
         </div>
     )
+}
+StarRating.defaultProps = {
+    handrating : () => {}
 }
 
 export default StarRating
